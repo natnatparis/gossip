@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+# validation d'attribut
+validates :name, presence: true
+validates :content, presence: true
+
   belongs_to :city
   has_many :gossips
   has_many :sent_messages, foreign_key:'sender_id', class_name:'PrivateMessage'
