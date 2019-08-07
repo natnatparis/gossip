@@ -1,0 +1,2 @@
+module MyGossipsHelper
+end
