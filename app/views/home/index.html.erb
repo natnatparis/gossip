@@ -38,7 +38,19 @@
       <p><strong>Voici la liste </strong></p>
 
     <% @all_gossips.each do |gossip| %>
-      <p>Titre :<%= gossip.title %> || Auteur : <%= gossip.user.first_name%> || <%=link_to "Lien", eachgossip_path(gossip.id)%> </p>
+    <!--  <p>Titre :<%= gossip.title %> || Auteur : <%= gossip.user.first_name%> || <%=link_to "Lien", eachgossip_path(gossip.id)%> </p>-->
+    <!--<p>Titre :<%= gossip.title %> </p> <br>-->
+    <!--<p>Auteur : <%= gossip.user.first_name%> </p> <br>-->
+    <!--<p><%=link_to "Lien", eachgossip_path(gossip.id)%> </p></p>-->
+
+    <div class="card w-75">
+      <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Titre :<%= gossip.title %></p>
+      <p class="card-text">Auteur : <%= gossip.user.first_name %></p>
+      <%=link_to "Lien", eachgossip_path(gossip.id)%>
+    </div>
+</div>
     <% end %>
   <br>
   </body>
