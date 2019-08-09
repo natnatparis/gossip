@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :my_gossips
   resources :users
   resources :cities 
+  
 
   resources :my_gossips do 
     resources :comments

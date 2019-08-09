@@ -32,7 +32,23 @@
     <h1>Nous joindre</h1> 
     <p>Ceci est la page contact simple</p>
     <p> Hello there <%= User %><p>
-    <p>Votre avis nous interresse<p>
+    <p>Votre avis nous interresse, vite un potin !<p>
+
+      <%= form_with scope: :my_gossip, local: true do |form| %>
+      <p>
+        <%= form.label :title %><br>
+        <%= form.text_field :title %>
+      </p>
+    
+      <p>
+        <%= form.label :text %><br>
+        <%= form.text_area :text %>
+      </p>
+    
+      <p>
+        <%= form.submit %>
+      </p>
+      <% end %>
    
     <div class="jumbotron jumbotron-fluid">
   <div class="container">
