@@ -5,7 +5,19 @@ Rails.application.routes.draw do
 
   resources :my_gossips
   resources :users
-  
+  resources :cities 
+
+  resources :my_gossips do 
+    resources :comments
+  end
+
+  resources :users do 
+    resources :likes
+  end
+
+  resources :my_gossips do 
+    resources :tags
+  end
 
   root "home#index"
   get 'welcome/:first_name', to: "hidden#index" #PAGE WELCOME
