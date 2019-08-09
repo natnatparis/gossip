@@ -31,8 +31,8 @@
 
     <h1>Nous joindre</h1> 
     <p>Ceci est la page contact simple</p>
-    <p> Hello there <%= User %><p>
-    <p>Votre avis nous interresse, vite un potin !<p>
+    <p> Hello there <% @name %><p>
+    <p>Donnez vite votre potin !<p>
 
       <%= form_with scope: :my_gossip, local: true do |form| %>
       <p>
